@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 echo "This script will only setup the simlinks required for \
 config files. Yoy need to manualy install the tools using brew, \
 omz, etc. See README.md"
