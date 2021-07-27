@@ -25,9 +25,15 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home
 #Bison
 export PATH="/usr/local/opt/bison/bin:$PATH"
 
+# Stack
+export PATH="$PATH:/usr/local/bin/stack"
+
+# Stack binaries
+export PATH="$PATH:/Users/compux72/.local/bin"
+
+
 # iTerm2
 source ~/.iterm2_shell_integration.zsh
-
 
 ######################################
 # Aliases

@@ -54,3 +54,4 @@ endif
 " custom config
 syntax on
 colorscheme delek
+set tabstop=4
