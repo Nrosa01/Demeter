@@ -39,7 +39,12 @@ source ~/.iterm2_shell_integration.zsh
 # Aliases
 ######################################
 
-
+######################################
+# OMZ plugins config
+######################################
+# Avoid syntax higlight to crash console. See this issue on GitHub
+# https://github.com/zsh-users/zsh-syntax-highlighting/issues/513
+export ZSH_HIGHLIGHT_MAXLENGTH=20
 ######################################
 # Oh My ZSH config
 ######################################
