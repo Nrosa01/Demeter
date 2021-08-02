@@ -35,6 +35,12 @@ export PATH="$PATH:/Users/compux72/.local/bin"
 # iTerm2
 source ~/.iterm2_shell_integration.zsh
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 ######################################
 # Aliases
 ######################################
