@@ -2,7 +2,6 @@
 # Theme
 ######################################
 
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -16,41 +15,9 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ######################################
-# PATH enviroment
-######################################
-# Java Home jdk 14
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home
-
-
-#Bison
-export PATH="/usr/local/opt/bison/bin:$PATH"
-
-# Stack
-export PATH="$PATH:/usr/local/bin/stack"
-
-# Stack binaries
-export PATH="$PATH:$HOME/.local/bin"
-
-
 # iTerm2
-source ~/.iterm2_shell_integration.zsh
-alias iterm='open -a "iterm"'
-
-# JetBrains toolbox shell script location
-export PATH="$PATH:$HOME/.jetbrains"
-
-# Commandline utils made with zsh
-export PATH="$PATH:$HOME/Demeter/scripts"
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
 ######################################
-# Aliases
-######################################
+# source ~/.iterm2_shell_integration.zsh
 
 ######################################
 # OMZ plugins config
@@ -58,6 +25,7 @@ export NVM_DIR="$HOME/.nvm"
 # Avoid syntax higlight to crash console. See this issue on GitHub
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/513
 export ZSH_HIGHLIGHT_MAXLENGTH=160
+
 ######################################
 # Oh My ZSH config
 ######################################
