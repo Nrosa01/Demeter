@@ -1,3 +1,9 @@
+# Performance analisis
+# zmodload zsh/zprof
+
+# Disable magic functions
+#https://github.com/ohmyzsh/ohmyzsh/issues/5569
+DISABLE_MAGIC_FUNCTIONS=true
 ######################################
 # Theme
 ######################################
