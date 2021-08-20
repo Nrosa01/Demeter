@@ -12,7 +12,10 @@
 # To see the full list of installed utilities, see [README.md](README.md)     #
 ###############################################################################
 
+# Remote VCS
 export REMOTE_URL="https://github.com/Altair-Bueno/Demeter"
+# Where is the backup folder
+export DEMETER="$HOME/Demeter"
 
 cd "$HOME"
 
@@ -20,7 +23,6 @@ cd "$HOME"
 if [ -z "$GITHUB_WORKSPACE" ];
 then
 	# Restoring backup
-	export DEMETER="$HOME/Demeter"
 
 	if [[ -d "$DEMETER" ]]
 	then
