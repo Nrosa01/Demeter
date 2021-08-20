@@ -29,7 +29,7 @@ export PATH="/usr/local/opt/bison/bin:$PATH"
 export PATH="$PATH:/usr/local/bin/stack"
 
 # Stack binaries
-export PATH="$PATH:/Users/compux72/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 
 # iTerm2
@@ -37,10 +37,10 @@ source ~/.iterm2_shell_integration.zsh
 alias iterm='open -a "iterm"'
 
 # JetBrains toolbox shell script location
-export PATH="$PATH:/Users/compux72/.jetbrains"
+export PATH="$PATH:$HOME/.jetbrains"
 
 # Commandline utils made with zsh
-export PATH="$PATH:/Users/compux72/.commandutil"
+export PATH="$PATH:$HOME/Demeter/scripts"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -66,7 +66,7 @@ export ZSH_HIGHLIGHT_MAXLENGTH=160
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/compux72/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

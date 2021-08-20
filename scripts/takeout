@@ -8,7 +8,7 @@
 # will be preserved on the parent folder
 #
 # Althought this script can be used as utility from the commandline
-# i mainly use it for Automator: 
+# i mainly use it for macOS Automator: 
 # Right click > Services > Take files out of folder
 
 if [ -d "$1" ] 
