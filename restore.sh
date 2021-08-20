@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 echo "This script will only setup the symlinks required for \
 config files. You need to manually install the tools using brew, \
 omz, etc. See README.md"
@@ -10,25 +10,28 @@ cd "$HOME"
 if [ -z "$GITHUB_WORKSPACE" ];
 then
 	# Restoring backup
-	git clone https://github.com/Altair-Bueno/Demeter
 	export DEMETER="$HOME/Demeter"
+	if [[ -d "$DEMETER" ]]
+	then
+		echo "Directory already exist, skipping clone"
+	else 
+		git clone https://github.com/Altair-Bueno/Demeter
+	fi
 else 
 	# If CI workflow
 	export DEMETER="$GITHUB_WORKSPACE"
 fi
 
-# Create links
-ln -s "$DEMETER"/* "$HOME"
 
-# Successfull
-if ls -la | grep "README.md ->";
-then
-	echo "Done"
-	exit 0 
-else
-	echo "Err"
-	exit 1	
-fi	
+# Create links
+cd "$DEMETER/backup"
+
+for TEMP in .*
+do
+	echo "Linking $TEMP"
+	ln -nfs "$DEMETER/backup/$TEMP" "$HOME"
+done
+
 
 
 

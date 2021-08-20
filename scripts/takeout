@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+# Takeout 1.0
+# Altair Bueno
+#
+# This shell script moves all elements out of a given directory to
+# the parent folder. This will delete the original folder but files 
+# will be preserved on the parent folder
+#
+# Althought this script can be used as utility from the commandline
+# i mainly use it for Automator: 
+# Right click > Services > Take files out of folder
+
+if [ -d "$1" ] 
+then
+cd "$1" 
+fi 
+
+for FILE in *
+do
+	mv "$FILE" ../
+done
+rm -fr "$(pwd)"
+exit
