@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 echo "This script will only setup the symlinks required for \
 config files. You need to manually install the tools using brew, \
 omz, etc. See README.md"
