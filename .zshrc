@@ -34,6 +34,13 @@ export PATH="$PATH:/Users/compux72/.local/bin"
 
 # iTerm2
 source ~/.iterm2_shell_integration.zsh
+alias iterm='open -a "iterm"'
+
+# JetBrains toolbox shell script location
+export PATH="$PATH:/Users/compux72/.jetbrains"
+
+# Commandline utils made with zsh
+export PATH="$PATH:/Users/compux72/.commandutil"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

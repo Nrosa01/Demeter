@@ -4,21 +4,21 @@ config files. You need to manually install the tools using brew, \
 omz, etc. See README.md"
 
 # Move to Home dir
-cd $HOME
+cd "$HOME"
 
 # Check CI
-if [ -z $GITHUB_WORKSPACE ];
+if [ -z "$GITHUB_WORKSPACE" ];
 then
 	# Restoring backup
 	git clone https://github.com/Altair-Bueno/Demeter
-	export DEMETER=$HOME/Demeter
+	export DEMETER="$HOME/Demeter"
 else 
 	# If CI workflow
-	export DEMETER=$GITHUB_WORKSPACE
+	export DEMETER="$GITHUB_WORKSPACE"
 fi
 
 # Create links
-ln -s $DEMETER/* $HOME
+ln -s "$DEMETER"/* "$HOME"
 
 # Successfull
 if ls -la | grep "README.md ->";
