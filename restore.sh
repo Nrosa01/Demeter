@@ -18,10 +18,10 @@ else
 fi
 
 # Create links
-ln -s "$DEMETER"/* "$HOME"
+ln -s "$DEMETER"/.* "$HOME"
 
 # Successfull
-if ls -la | grep "README.md ->";
+if ls -la | grep ".zshrc ->";
 then
 	echo "Done"
 	exit 0 
