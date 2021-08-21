@@ -17,23 +17,28 @@
 
 export DEMETER="$HOME/Demeter"
 export COMMIT_MESSAGE="[$(date '+%d/%m/%y')]: Scheduled job on $(uname -n)"
+export LOG_FILE="$DEMETER/gitlog.txt"
 
 cd "$DEMETER"
 
+echo "$COMMIT_MESSAGE
+********************************************************************************
+" > "$LOG_FILE"
+
 # Has changes?
-if [[ $(git diff --quiet > "$DEMETER/gitlog.txt") ]]
+if [[ $(git diff >> "$LOG_FILE") ]]
 then 
 	echo "No changes found"
 else 
 	# echo "true"
-	echo "changes found, updating"
-	if [[ $( { git fetch && git merge } >> "$DEMETER/gitlog.txt" ) ]]
+	echo "Found changes, updating"
+	if [[ $( { git fetch && git merge } >> "$LOG_FILE" ) ]]
 	then
-		echo "Found errors, check logs"
+		echo "Automatic merge failed. Check logs at $LOG_FILE"
 	else 
-        git add --all
-		git commit -am "$COMMIT_MESSAGE" >> "$DEMETER/gitlog.txt"
-		git push  >> "$DEMETER/gitlog.txt"
-		echo "Backup successful" 
+        git add --all >> "$LOG_FILE"
+		git commit -am "$COMMIT_MESSAGE" >> "$LOG_FILE"
+		git push  >> "$LOG_FILE"
+		echo "Backup successful"
 	fi
 fi
