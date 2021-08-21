@@ -1,0 +1,25 @@
+#!/bin/zsh
+# Has changes?
+
+export DEMETER="$HOME/Demeter"
+export COMMIT_MESSAGE="[$(date '+%d/%m/%y')]: Scheduled job on $(uname -n)"
+
+cd "$DEMETER"
+
+if [[ $(git diff --quiet > "$DEMETER/gitlog.txt") ]]
+then 
+	# echo "false"
+	echo "No changes found"
+else 
+	# echo "true"
+	echo "changes found, updating"
+	if [[ $( { git fetch && git merge } >> "$DEMETER/gitlog.txt" ) ]]
+	then
+		echo "Found errors, check logs"
+	else 
+        git add --all
+		git commit -am "$COMMIT_MESSAGE" >> "$DEMETER/gitlog.txt"
+		git push  >> "$DEMETER/gitlog.txt"
+		echo "Backup successful" 
+	fi
+fi
