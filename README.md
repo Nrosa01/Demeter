@@ -57,6 +57,7 @@ aom assimp autoconf automake bison brotli cairo coreutils coursier dbus docbook 
   (UNIX systems)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- [MesloLGS-NF-Regular size 18](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
 
 > ## List packages on system
 > ```bash
@@ -65,4 +66,5 @@ aom assimp autoconf automake bison brotli cairo coreutils coursier dbus docbook 
 
 
 # If you want your own backup system
-Check out the [wiki](https://github.com/Altair-Bueno/Demeter/wiki)
+Check out the [wiki](https://github.com/Altair-Bueno/Demeter/wiki) to learn
+how to do a dotfiles backup
