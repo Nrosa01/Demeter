@@ -68,3 +68,9 @@ aom assimp autoconf automake bison brotli cairo coreutils coursier dbus docbook 
 # If you want your own backup system
 Check out the [wiki](https://github.com/Altair-Bueno/Demeter/wiki) to learn
 how to do a dotfiles backup
+
+# License
+
+[Scrips](scripts/) are licensed under the MIT license. Files under the 
+[backup folder](backup/) have different licenses and belong to their respective 
+owners
