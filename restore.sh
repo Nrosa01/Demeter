@@ -14,36 +14,31 @@
 
 # Remote VCS
 export REMOTE_URL="https://github.com/Altair-Bueno/Demeter"
-# Where is the backup folder
+# Where is the backup folder. VSC folder name and system folder must match
 export DEMETER="$HOME/Demeter"
 
-cd "$HOME"
 
-# Check CI
-if [ -z "$GITHUB_WORKSPACE" ];
+# Restoring backup
+if [[ -d "$DEMETER" ]]
 then
-	# Restoring backup
-
-	if [[ -d "$DEMETER" ]]
+	# "$DEMETER" folder already exist on this machine, testing origin
+	echo "Found Demeter folder on $DEMETER, checking source"
+	cd "$DEMETER"
+	if [[ $(git config --get remote.origin.url) == "$REMOTE_URL" ]]
 	then
-		# "$HOME/Demeter" folder already exist on this machine, testing origin
-		echo "Found Demeter folder on $DEMETER, checking source"
-		if [[ $(git config --get remote.origin.url) == "$REMOTE_URL" ]]
-		then
-			echo "Updating backup"
-			git pull
-		else 
-			echo "This script expected a different remote server, exiting..."
-			exit
-		fi
+		echo "Updating backup..."
+		git pull
 	else 
-		echo "Found no backup on $DEMETER. Cloning from remote"
-		git clone "$REMOTE_URL"
+		echo "This script expected a different remote server, exiting..."
+		exit 1
 	fi
-
 else 
-	# CI doesn't need clone. We can find the path to sources under variable
-	export DEMETER="$GITHUB_WORKSPACE"
+	echo "Found no backup on $DEMETER. Cloning from remote"
+
+	export PARENT_FOLDER=$(dirname "$DEMETER")
+	cd "$PARENT_FOLDER"
+
+	git clone "$REMOTE_URL"
 fi
 
 
@@ -51,7 +46,7 @@ fi
 cd "$DEMETER/backup"
 
 echo "Creating links"
-for TEMP in .*
+for TEMP in $(ls -A)
 do
 	echo "Linking $TEMP"
 	ln -nfs "$DEMETER/backup/$TEMP" "$HOME"

@@ -1,3 +1,4 @@
+# Disable compinit to improve performance
 skip_global_compinit=1
 # Rust cargo
 . "$HOME/.cargo/env"

@@ -17,12 +17,12 @@
 
 if [ -d "$1" ] 
 then
-cd "$1" 
+	cd "$1" 
 fi 
 
 for FILE in *
 do
-	mv "$FILE" ../
+	mv "$FILE" ../ || (echo "Error moving files"; exit 1)
 done
 rm -fr "$(pwd)"
 exit
