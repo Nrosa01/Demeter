@@ -3,6 +3,8 @@
 name: Test backup script
 on:
   workflow_dispatch:
+env:
+  RESTORE: "https://raw.githubusercontent.com/Altair-Bueno/Demeter/master/restore.sh"
 jobs:
   build:
     strategy:
@@ -11,7 +13,7 @@ jobs:
     runs-on : ${{ matrix.os }}
     steps:
       - name: Install backup
-        run: curl https://raw.githubusercontent.com/Altair-Bueno/Demeter/master/restore.sh | bash
+        run: curl "$RESTORE" | bash
       - name: Check backup
         run: |
           test -d $HOME/Demeter
@@ -19,4 +21,4 @@ jobs:
           test -f $HOME/.p10k.zsh
           cat $HOME/.gitconfig | grep "67512202+Altair-Bueno@users.noreply.github.com"
       - name: Update and reinstall
-        run: curl https://raw.githubusercontent.com/Altair-Bueno/Demeter/master/restore.sh | bash
+        run: curl "$RESTORE" | bash
