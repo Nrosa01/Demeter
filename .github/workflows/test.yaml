@@ -19,4 +19,4 @@ jobs:
           test -f $HOME/.p10k.zsh
           cat $HOME/.gitconfig | grep "67512202+Altair-Bueno@users.noreply.github.com"
       - name: Update and reinstall
-        run: curl https://github.com/Altair-Bueno/Demeter/raw/master/restore.sh | bash
+        run: curl https://raw.githubusercontent.com/Altair-Bueno/Demeter/master/restore.sh | bash
