@@ -11,7 +11,7 @@ jobs:
     runs-on : ${{ matrix.os }}
     steps:
       - name: Install backup
-        run: curl https://github.com/Altair-Bueno/Demeter/raw/master/restore.sh | bash
+        run: curl https://raw.githubusercontent.com/Altair-Bueno/Demeter/master/restore.sh | bash
       - name: Check backup
         run: |
           test -d $HOME/Demeter
