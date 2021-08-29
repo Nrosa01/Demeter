@@ -61,7 +61,7 @@ how to do a dotfiles backup
 # License
 
 - [Scrips](scripts/) are licensed under the MIT license
-- [restore.sh] is licensed under the MIT license
+- [restore.sh](restore.sh) is licensed under the MIT license
 - [database icon](Icon?) licensed under MIT by [VigoKrumins](https://github.com/VigoKrumins/folder-icons/)
 - Other files under the [backup folder](backup/) have different licenses and 
 belong to their respective owners
