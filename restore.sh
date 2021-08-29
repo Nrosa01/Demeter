@@ -2,7 +2,8 @@
 
 ###############################################################################
 # Restore 1.0                                                                 #
-# Altair Bueno                                                                #
+# Altair Bueno MIT license                                                    #
+# https://github.com/Altair-Bueno/Demeter                                     #
 #                                                                             #
 # This script will only setup the symlinks required for commandline utilities #
 # such as vim, git or zsh. For some utilities, you may need some extra        #
@@ -49,5 +50,12 @@ echo "Creating links"
 for TEMP in $(ls -A)
 do
 	echo "Linking $TEMP"
-	ln -nfs "$DEMETER/backup/$TEMP" "$HOME"
+	ln -nfs "$DEMETER/backup/$TEMP" "$HOME/$TEMP"
 done
+
+# Creating vim folders
+cd "$HOME"
+mkdir ".vim" 2> /dev/null
+mkdir ".vim/undodir" 2> /dev/null
+
+exit 0

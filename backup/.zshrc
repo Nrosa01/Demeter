@@ -26,6 +26,12 @@ fi
 # source ~/.iterm2_shell_integration.zsh
 
 ######################################
+# fnm
+######################################
+path+="$HOME/.fnm"
+eval "$(fnm env)"
+
+######################################
 # OMZ plugins config
 ######################################
 # Avoid syntax higlight to crash console. See this issue on GitHub

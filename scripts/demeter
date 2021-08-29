@@ -2,8 +2,8 @@
 
 ###############################################################################
 # Demeter 1.0                                                                 #
-#                                                                             # 
-# Altair Bueno                                                                #
+# Altair Bueno MIT license                                                    #
+# https://github.com/Altair-Bueno/Demeter                                     #
 #                                                                             #
 # This script provides a baseline for developing your own automator worklflow #
 # with automatic uploads.                                                     #
@@ -36,7 +36,7 @@ else
 	then
 		echo "Automatic merge failed. Check logs at $LOG_FILE"
 	else 
-        git add --all >> "$LOG_FILE"
+  		git add --all >> "$LOG_FILE"
 		git commit -am "$COMMIT_MESSAGE" >> "$LOG_FILE"
 		git push  >> "$LOG_FILE"
 		echo "Backup successful"
