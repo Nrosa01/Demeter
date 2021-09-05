@@ -89,3 +89,5 @@ if (empty($TMUX))
 endif
 syntax on
 colorscheme onedark
+" Current color is too light for LineNr
+:highlight LineNr ctermfg=grey
