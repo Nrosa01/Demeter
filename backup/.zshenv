@@ -11,8 +11,11 @@ export PATH="$PATH:/Users/compux72/Library/Application Support/Coursier/bin"
 # Disable some less nonsense
 export LESSHISTFILE=-
 
-# Java Home jdk 16
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk-16.0.1/Contents/Home"
+# Java Home jdk 17
+export JAVA_HOME="/usr/local/Cellar/openjdk/17/libexec/openjdk.jdk/Contents/Home"
+
+# Use bat as pager instead
+export PAGER="bat"
 
 #Bison
 path+='/usr/local/opt/bison/bin'
@@ -28,6 +31,9 @@ path+="$HOME/.jetbrains"
 
 # Commandline utils made with zsh
 path+="$HOME/Demeter/scripts"
+
+# ZSH completitions
+export SHELL_COMPLETIONS_DIR="$HOME/.oh-my-zsh/completions"
 
 # nvm. It's sloooooooow. Use fnm instead
 # export NVM_DIR="$HOME/.nvm"
@@ -47,3 +53,4 @@ path+="$HOME/Library/Python/3.9/bin"
 ######################################
 alias iterm='open -a "iterm"'
 alias dev='cd "$HOME/Developer/"'
+alias python='python3.9'
