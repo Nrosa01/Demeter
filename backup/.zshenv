@@ -35,10 +35,8 @@ path+="$HOME/Demeter/scripts"
 # ZSH completitions
 export SHELL_COMPLETIONS_DIR="$HOME/.oh-my-zsh/completions"
 
-# nvm. It's sloooooooow. Use fnm instead
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Mermaid filter (https://github.com/raghur/mermaid-filter)
+# export MERMAID_FILTER_FORMAT='svg'
 
 # nvm alternative. Faster, built using Rust
 alias nvm='fnm'

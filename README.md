@@ -30,7 +30,7 @@ as your package manager you might need to manually install some of these
 packages or find alternatives.
 
 ```text
-aom assimp autoconf automake bat bison brotli cairo coreutils coursier dbus docbook docbook-xsl double-conversion fd fnm fontconfig freetype fribidi gcc gdbm gdk-pixbuf gettext ghostscript glib gmp gnu-getopt gobject-introspection gradle graphite2 harfbuzz highlight hyperfine icu4c imagemagick imath isl jasper jbig2dec jpeg libb2 libde265 libffi libheif libidn libidn2 liblqr libmpc libomp libpng libproxy libpthread-stubs librsvg libtiff libtool libunistring libx11 libxau libxcb libxdmcp libxext libxrender little-cms2 lrzsz lua lzo m4 maven mono mpdecimal mpfr ncurses neofetch openexr openjdk openjpeg openssl@1.1 pandoc pango pcre pcre2 pixman pkg-config ponysay pv python@3.8 python@3.9 qt readline sbt screen screenfetch screenresolution shared-mime-info smartmontools sqlite tcl-tk telnet testdisk tree webp wget x265 xmlto xorgproto xz youtube-dl zsh zstd authy basictex blackhole-2ch discord firefox gitkraken google-chrome google-drive handbrake iina iterm2 java maccy mounty mysqlworkbench netnewswire obs qlvideo sbarex-qlmarkdown syntax-highlight tg-pro tiles transmission typora webpquicklook wireshark
+aom assimp autoconf automake bat bdw-gc bison brotli c-ares ca-certificates cairo coreutils coursier dav1d dbus docbook docbook-xsl double-conversion fd ffmpeg flac fnm fontconfig fprobe freetype frei0r fribidi gcc gdbm gdk-pixbuf gettext ghostscript giflib glib gmp gnu-getopt gnutls gobject-introspection gradle graphite2 guile harfbuzz highlight hyperfine icu4c imagemagick imath isl jasper jbig2dec jemalloc jpeg jpeg-xl lame leptonica libass libb2 libbluray libde265 libev libevent libffi libheif libidn libidn2 liblqr libmpc libnghttp2 libogg libomp libpng libproxy libpthread-stubs librsvg libsamplerate libsndfile libsodium libsoxr libtasn1 libtiff libtool libunistring libuv libvidstab libvmaf libvorbis libvpx libx11 libxau libxcb libxdmcp libxext libxrender little-cms2 lrzsz lua lzo m4 macos-term-size maven mongosh mono mpdecimal mpfr ncurses neofetch nettle nghttp2 node@14 opencore-amr openexr openjdk openjpeg openssl@1.1 opus p11-kit pandoc pango pcre pcre2 pixman pkg-config pv python@3.10 python@3.8 python@3.9 rav1e readline ripgrep rubberband sbt screen screenfetch screenresolution sdl2 shared-mime-info smartmontools snappy speex sqlite srt tcl-tk telnet tesseract testdisk theora tree unbound webp wget x264 x265 xmlto xorgproto xvid xz youtube-dl zeromq zimg zsh zstd authy basictex blackhole-2ch cocoarestclient discord docker eclipse-java firefox google-chrome google-drive handbrake iina iterm2 java jetbrains-toolbox maccy mounty netnewswire obs qlvideo sbarex-qlmarkdown syntax-highlight tg-pro tiles transmission typora webpquicklook
 ```
 
 > List packages on system
@@ -61,6 +61,10 @@ I'm currently using One Dark. You can find it for:
 # LaTex & pandoc
 
 - [Theme](https://github.com/Wandmalfarbe/pandoc-latex-template)
+
+# Other config
+
+- Terminal size: `100x30`
 
 # If you want your own backup system
 
