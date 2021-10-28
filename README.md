@@ -29,8 +29,8 @@ Right now `HomeBrew` counts 135 packages installed. If you are not using `brew`
 as your package manager you might need to manually install some of these
 packages or find alternatives.
 
-```text
-aom assimp autoconf automake bat bdw-gc bison brotli c-ares ca-certificates cairo coreutils coursier dav1d dbus docbook docbook-xsl double-conversion fd ffmpeg flac fnm fontconfig fprobe freetype frei0r fribidi gcc gdbm gdk-pixbuf gettext ghostscript giflib glib gmp gnu-getopt gnutls gobject-introspection gradle graphite2 guile harfbuzz highlight hyperfine icu4c imagemagick imath isl jasper jbig2dec jemalloc jpeg jpeg-xl lame leptonica libass libb2 libbluray libde265 libev libevent libffi libheif libidn libidn2 liblqr libmpc libnghttp2 libogg libomp libpng libproxy libpthread-stubs librsvg libsamplerate libsndfile libsodium libsoxr libtasn1 libtiff libtool libunistring libuv libvidstab libvmaf libvorbis libvpx libx11 libxau libxcb libxdmcp libxext libxrender little-cms2 lrzsz lua lzo m4 macos-term-size maven mongosh mono mpdecimal mpfr ncurses neofetch nettle nghttp2 node@14 opencore-amr openexr openjdk openjpeg openssl@1.1 opus p11-kit pandoc pango pcre pcre2 pixman pkg-config pv python@3.10 python@3.8 python@3.9 rav1e readline ripgrep rubberband sbt screen screenfetch screenresolution sdl2 shared-mime-info smartmontools snappy speex sqlite srt tcl-tk telnet tesseract testdisk theora tree unbound webp wget x264 x265 xmlto xorgproto xvid xz youtube-dl zeromq zimg zsh zstd authy basictex blackhole-2ch cocoarestclient discord docker eclipse-java firefox google-chrome google-drive handbrake iina iterm2 java jetbrains-toolbox maccy mounty netnewswire obs qlvideo sbarex-qlmarkdown syntax-highlight tg-pro tiles transmission typora webpquicklook
+```brew_packages
+aom assimp autoconf automake bat bdw-gc bison brotli c-ares ca-certificates cairo coreutils coursier dav1d dbus docbook docbook-xsl docker double-conversion fd ffmpeg flac fnm fontconfig fprobe freetype frei0r fribidi gcc gdbm gdk-pixbuf gettext ghostscript giflib glib gmp gnu-getopt gnutls gobject-introspection gradle graphite2 guile handbrake harfbuzz highlight hyperfine icu4c imagemagick imath isl jasper jbig2dec jemalloc jpeg jpeg-xl lame leptonica libass libb2 libbluray libde265 libev libevent libffi libheif libidn libidn2 liblqr libmpc libnghttp2 libogg libomp libpng libproxy libpthread-stubs librsvg libsamplerate libsndfile libsodium libsoxr libtasn1 libtiff libtool libunistring libuv libvidstab libvmaf libvorbis libvpx libx11 libxau libxcb libxdmcp libxext libxrender little-cms2 lrzsz lua lzo m4 macos-term-size maven mongosh mono mpdecimal mpfr ncurses neofetch nettle nghttp2 node@14 opencore-amr openexr openjdk openjpeg openssl@1.1 opus p11-kit pandoc pango pcre pcre2 pixman pkg-config pv python@3.10 python@3.8 python@3.9 rav1e readline ripgrep rubberband sbt screen screenfetch screenresolution sdl2 shared-mime-info smartmontools snappy speex sqlite srt tcl-tk telnet tesseract testdisk theora tree unbound webp wget x264 x265 xmlto xorgproto xvid xz youtube-dl zeromq zimg zsh zsh-syntax-highlighting zstd authy basictex blackhole-2ch cocoarestclient discord docker eclipse-java google-chrome google-drive handbrake iina iterm2 java jetbrains-toolbox maccy mounty netnewswire obs qlvideo sbarex-qlmarkdown syntax-highlight tg-pro tiles transmission webpquicklook
 ```
 
 > List packages on system
@@ -45,9 +45,7 @@ aom assimp autoconf automake bat bdw-gc bison brotli c-ares ca-certificates cair
 - [iterm2](https://iterm2.com/) (macOS) or
   [Alacritty](https://github.com/alacritty/alacritty) (UNIX systems)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [MesloLGS-NF-Regular size 18](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
-- [fnm](https://github.com/Schniz/fnm)
+- [MesloLGS-NF-Regular size 16](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
 
 # Colorscheme
 
@@ -61,10 +59,13 @@ I'm currently using One Dark. You can find it for:
 # LaTex & pandoc
 
 - [Theme](https://github.com/Wandmalfarbe/pandoc-latex-template)
+- [Mermaid filter](https://github.com/raghur/mermaid-filter)
 
 # Other config
 
 - Terminal size: `100x30`
+- [Natural text editing on iTerm2](https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961):
+  iTerm → Preferences → Profiles → Keys → Load Preset… → Natural Text Editing
 
 # If you want your own backup system
 

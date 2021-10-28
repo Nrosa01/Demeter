@@ -35,14 +35,11 @@ path+="$HOME/Demeter/scripts"
 # ZSH completitions
 export SHELL_COMPLETIONS_DIR="$HOME/.oh-my-zsh/completions"
 
-# Mermaid filter (https://github.com/raghur/mermaid-filter)
-# export MERMAID_FILTER_FORMAT='svg'
 
 # nvm alternative. Faster, built using Rust
 alias nvm='fnm'
 
-
-# Python 3.9
+# Python 3.10
 path+="$HOME/Library/Python/3.9/bin"
 
 
@@ -51,4 +48,4 @@ path+="$HOME/Library/Python/3.9/bin"
 ######################################
 alias iterm='open -a "iterm"'
 alias dev='cd "$HOME/Developer/"'
-alias python='python3.9'
+alias python='python3.10'

@@ -8,7 +8,7 @@
 # This script provides a baseline for developing your own automator worklflow #
 # with automatic uploads.                                                     #
 #                                                                             # 
-# 1. Create new Automator Workflow                                            #
+# 1. Create new Shortcuts Workflow                                            #
 # 2. Use calendar trigger                                                     #
 # 3. Use 'Run Shell script'                                                   #
 # 4. Write the path to this script. For example                               #
@@ -16,7 +16,13 @@
 ###############################################################################
 
 export DEMETER="$HOME/Demeter"
-export COMMIT_MESSAGE="[$(date '+%d/%m/%y')]: Scheduled job on $(uname -n)"
+if [[ -z "$1" ]]
+then 
+	export COMMIT_MESSAGE="[$(date '+%d/%m/%y')]: Scheduled job on $(uname -n)"
+else 
+	export COMMIT_MESSAGE="$1"
+fi
+
 export LOG_FILE="$DEMETER/gitlog.txt"
 
 cd "$DEMETER"

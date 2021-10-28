@@ -58,4 +58,7 @@ cd "$HOME"
 mkdir ".vim" 2> /dev/null
 mkdir ".vim/undodir" 2> /dev/null
 
+# Setting up the .gitignore_global file
+git config --global core.excludesfile ~/.gitignore_global
+
 exit 0
