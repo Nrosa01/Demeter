@@ -17,6 +17,11 @@ export JAVA_HOME="/usr/local/Cellar/openjdk/17/libexec/openjdk.jdk/Contents/Home
 # Use bat as pager instead
 export PAGER="bat"
 
+# Allow mousewheel scroll on bat
+# https://github.com/sharkdp/bat/issues/188
+# https://github.com/sharkdp/bat#using-a-different-pager
+export BAT_PAGER="less -RF"
+
 #Bison
 path+='/usr/local/opt/bison/bin'
 
@@ -49,3 +54,4 @@ path+="$HOME/Library/Python/3.9/bin"
 alias iterm='open -a "iterm"'
 alias dev='cd "$HOME/Developer/"'
 alias python='python3.10'
+alias pip='python -m pip'

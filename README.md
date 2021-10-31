@@ -66,6 +66,7 @@ I'm currently using One Dark. You can find it for:
 - Terminal size: `100x30`
 - [Natural text editing on iTerm2](https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961):
   iTerm → Preferences → Profiles → Keys → Load Preset… → Natural Text Editing
+- Set iterm2 configuration folder to `"$HOME/Demeter/iterm2"`
 
 # If you want your own backup system
 
