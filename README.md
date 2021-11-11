@@ -30,7 +30,7 @@ as your package manager you might need to manually install some of these
 packages or find alternatives.
 
 ```brew_packages
-aom assimp autoconf automake bat bdw-gc bison brotli c-ares ca-certificates cairo coreutils coursier dav1d dbus docbook docbook-xsl docker double-conversion fd ffmpeg flac fnm fontconfig fprobe freetype frei0r fribidi gcc gdbm gdk-pixbuf gettext ghostscript giflib glib gmp gnu-getopt gnutls gobject-introspection gradle graphite2 guile handbrake harfbuzz highlight hyperfine icu4c imagemagick imath isl jasper jbig2dec jemalloc jpeg jpeg-xl lame leptonica libass libb2 libbluray libde265 libev libevent libffi libheif libidn libidn2 liblqr libmpc libnghttp2 libogg libomp libpng libproxy libpthread-stubs librsvg libsamplerate libsndfile libsodium libsoxr libtasn1 libtiff libtool libunistring libuv libvidstab libvmaf libvorbis libvpx libx11 libxau libxcb libxdmcp libxext libxrender little-cms2 lrzsz lua lzo m4 macos-term-size maven mongosh mono mpdecimal mpfr ncurses neofetch nettle nghttp2 node@14 opencore-amr openexr openjdk openjpeg openssl@1.1 opus p11-kit pandoc pango pcre pcre2 pixman pkg-config pv python@3.10 python@3.8 python@3.9 rav1e readline ripgrep rubberband sbt screen screenfetch screenresolution sdl2 shared-mime-info smartmontools snappy speex sqlite srt tcl-tk telnet tesseract testdisk theora tree unbound webp wget x264 x265 xmlto xorgproto xvid xz youtube-dl zeromq zimg zsh zsh-syntax-highlighting zstd authy basictex blackhole-2ch cocoarestclient discord docker eclipse-java google-chrome google-drive handbrake iina iterm2 java jetbrains-toolbox maccy mounty netnewswire obs qlvideo sbarex-qlmarkdown syntax-highlight tg-pro tiles transmission webpquicklook
+aom assimp autoconf automake bat bdw-gc bison brotli c-ares ca-certificates cairo coreutils coursier croc dav1d dbus docbook docbook-xsl docker double-conversion fd ffmpeg flac fnm fontconfig fprobe freetype frei0r fribidi gcc gdbm gdk-pixbuf gettext ghostscript giflib glib gmp gnu-getopt gnutls gobject-introspection gradle graphite2 guile handbrake harfbuzz highlight hyperfine icu4c imagemagick imath isl jasper jbig2dec jemalloc jpeg jpeg-xl lame leptonica less libass libb2 libbluray libde265 libev libevent libffi libheif libidn libidn2 liblqr libmpc libnghttp2 libogg libomp libpng libproxy libpthread-stubs librsvg libsamplerate libsndfile libsodium libsoxr libtasn1 libtermkey libtiff libtool libunistring libuv libvidstab libvmaf libvorbis libvpx libvterm libx11 libxau libxcb libxdmcp libxext libxrender little-cms2 lrzsz lua luajit-openresty luv lzo m4 macos-term-size maven mongosh mono mpdecimal mpfr msgpack ncurses neofetch neovim nettle nghttp2 node@14 opencore-amr openexr openjdk openjpeg openssl@1.1 opus p11-kit pandoc pango pcre pcre2 pixman pkg-config pv python@3.10 python@3.8 python@3.9 rav1e readline ripgrep rubberband sbt screen screenfetch screenresolution sdl2 shared-mime-info smartmontools snappy speex sqlite srt tcl-tk telnet tesseract testdisk theora tree tree-sitter unbound unibilium webp wget x264 x265 xmlto xorgproto xvid xz youtube-dl zeromq zimg zsh zsh-syntax-highlighting zstd appcleaner authy basictex blackhole-2ch discord docker eclipse-java google-chrome google-drive handbrake iina iterm2 java jetbrains-toolbox jupyter-notebook-viewer maccy mounty netnewswire obs qlvideo sbarex-qlmarkdown syntax-highlight tg-pro tiles transmission webpquicklook
 ```
 
 > List packages on system
@@ -55,6 +55,15 @@ I'm currently using One Dark. You can find it for:
 - [iTerm2](https://github.com/one-dark/iterm-one-dark-theme)
 - [JetBrains' IDEs](https://github.com/one-dark/jetbrains-one-dark-theme)
 - [vim](https://github.com/joshdick/onedark.vim/)
+
+# Font
+
+- [Jetbrains Mono](https://www.jetbrains.com/es-es/lp/mono/)
+- [Jetbrains Mono Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+
+# macOS config
+
+- [Align to grid Finder](https://apple.stackexchange.com/questions/50508/how-can-i-make-all-folders-in-finder-snap-to-grid)
 
 # LaTex & pandoc
 

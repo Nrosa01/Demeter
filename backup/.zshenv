@@ -4,7 +4,7 @@ skip_global_compinit=1
 . "$HOME/.cargo/env"
 
 # >>> coursier install directory >>>
-export PATH="$PATH:/Users/compux72/Library/Application Support/Coursier/bin"
+export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
 # <<< coursier install directory <<<
 . "$HOME/.cargo/env"
 
@@ -15,12 +15,15 @@ export LESSHISTFILE=-
 export JAVA_HOME="/usr/local/Cellar/openjdk/17/libexec/openjdk.jdk/Contents/Home"
 
 # Use bat as pager instead
-export PAGER="bat"
+export PAGER='bat'
+
+# Bat theme
+export BAT_THEME='TwoDark'
 
 # Allow mousewheel scroll on bat
 # https://github.com/sharkdp/bat/issues/188
 # https://github.com/sharkdp/bat#using-a-different-pager
-export BAT_PAGER="less -RF"
+# export BAT_PAGER='less -RFX'
 
 #Bison
 path+='/usr/local/opt/bison/bin'
@@ -51,7 +54,23 @@ path+="$HOME/Library/Python/3.9/bin"
 ######################################
 # Aliases
 ######################################
+# nvm alternative. Faster, built using Rust
+alias nvm='fnm'
 alias iterm='open -a "iterm"'
 alias dev='cd "$HOME/Developer/"'
 alias python='python3.10'
 alias pip='python -m pip'
+
+if [[ $(uname) == 'Darwin' ]]
+then
+    # macOS specific config
+
+    # WTF Microsoft. Starting a whole Python interpreter for opening vscode????
+    # https://github.com/microsoft/vscode/issues/60579
+    alias code='open -b com.microsoft.VSCode'
+elif [[ $(uname) == 'Linux' ]]
+then
+    # Linux specific config
+
+    #
+fi
