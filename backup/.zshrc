@@ -1,9 +1,3 @@
-# Performance analisis
-# zmodload zsh/zprof
-
-# Disable magic functions
-#https://github.com/ohmyzsh/ohmyzsh/issues/5569
-DISABLE_MAGIC_FUNCTIONS=true
 ######################################
 # Theme
 ######################################
@@ -21,19 +15,52 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ######################################
+# Performance related
+######################################
+
+# Performance analisis
+# zmodload zsh/zprof
+
+# Disable magic functions
+#https://github.com/ohmyzsh/ohmyzsh/issues/5569
+DISABLE_MAGIC_FUNCTIONS=true
+
+# Disable compinit to improve performance
+skip_global_compinit=1
+
+######################################
+# Interactive config
+######################################
+
+# Disable some less nonsense
+export LESSHISTFILE=-
+
+# Use bat as pager instead
+export PAGER='bat'
+
+# Bat theme
+export BAT_THEME='TwoDark'
+
+# Allow mousewheel scroll on bat
+# https://github.com/sharkdp/bat/issues/188
+# https://github.com/sharkdp/bat#using-a-different-pager
+# export BAT_PAGER='less -RFX'
+
+# ZSH completitions
+export SHELL_COMPLETIONS_DIR="$HOME/.oh-my-zsh/completions"
+
+# fnm completitions
+eval "$(fnm env)"
+
+######################################
 # iTerm2
 ######################################
 source ~/.iterm2_shell_integration.zsh
 
 ######################################
-# fnm
-######################################
-path+="$HOME/.fnm"
-eval "$(fnm env)"
-
-######################################
 # OMZ plugins config
 ######################################
+
 # Avoid syntax higlight to crash console. See this issue on GitHub
 # https://github.com/zsh-users/zsh-syntax-highlighting/issues/513
 export ZSH_HIGHLIGHT_MAXLENGTH=160
@@ -71,10 +98,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=30
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS=true
@@ -89,7 +116,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
