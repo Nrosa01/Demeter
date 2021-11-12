@@ -50,6 +50,8 @@ echo "Creating links"
 for TEMP in $(ls -A)
 do
 	echo "Linking $TEMP"
+	# Delete the file before making the symlink, just in case
+	rm "$HOME/$TEMP"
 	ln -nfs "$DEMETER/backup/$TEMP" "$HOME/$TEMP"
 done
 

@@ -22,3 +22,6 @@ jobs:
           cat $HOME/.gitconfig | grep "67512202+Altair-Bueno@users.noreply.github.com"
       - name: Update and reinstall
         run: curl "$RESTORE" | bash
+      - name: Check home dir content
+        run: ls -la $HOME
+      
