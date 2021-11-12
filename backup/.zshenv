@@ -31,10 +31,20 @@ path+="$HOME/.fnm"
 ######################################
 alias nvm='fnm'
 alias iterm='open -a "iterm"'
-alias dev='cd "$HOME/Developer/"'
 alias python='python3.10'
 alias pip='python -m pip'
 
+######################################
+# Functions
+######################################
+
+function dev {
+    cd "$HOME/Developer/$1"
+}
+
+######################################
+# OS dependent config
+######################################
 if [[ $(uname) == 'Darwin' ]]
 then
     # macOS specific config
