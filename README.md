@@ -39,13 +39,21 @@ aom assimp autoconf automake bat bdw-gc bison brotli c-ares ca-certificates cair
 > brew list | egrep "^[^(==>)]" | xargs
 > ```
 
-# Outside packages
+# omz
 
-- [omz](https://ohmyz.sh/)
-- [iterm2](https://iterm2.com/) (macOS) or
-  [Alacritty](https://github.com/alacritty/alacritty) (UNIX systems)
-- [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [MesloLGS-NF-Regular size 16](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+First install [omz](https://ohmyz.sh/)
+
+## External plugins
+
+- [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+  (should be installed with homebrew)
+
+## Theme
+
+I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k). The
+[,p10k](backup/.p10k.zsh) script is already on this backup, so just install the
+theme after running the restore script
 
 # Colorscheme
 
@@ -58,12 +66,14 @@ I'm currently using One Dark. You can find it for:
 
 # Font
 
-- [Jetbrains Mono](https://www.jetbrains.com/es-es/lp/mono/)
-- [Jetbrains Mono Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+- [Jetbrains Mono](https://www.jetbrains.com/es-es/lp/mono/) for text editors
+- [Jetbrains Mono Nerd Fonts](https://www.nerdfonts.com/font-downloads) for the
+  console
 
 # macOS config
 
 - [Align to grid Finder](https://apple.stackexchange.com/questions/50508/how-can-i-make-all-folders-in-finder-snap-to-grid)
+- Set iterm2 configuration folder to `"$HOME/Demeter/iterm2"`
 
 # LaTex & pandoc
 
@@ -75,7 +85,6 @@ I'm currently using One Dark. You can find it for:
 - Terminal size: `100x30`
 - [Natural text editing on iTerm2](https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961):
   iTerm → Preferences → Profiles → Keys → Load Preset… → Natural Text Editing
-- Set iterm2 configuration folder to `"$HOME/Demeter/iterm2"`
 
 # If you want your own backup system
 
