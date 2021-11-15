@@ -33,6 +33,7 @@ alias nvm='fnm'
 alias iterm='open -a "iterm"'
 alias python='python3.10'
 alias pip='python -m pip'
+alias ascii='asciinema'
 
 ######################################
 # Functions
