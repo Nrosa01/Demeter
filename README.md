@@ -51,8 +51,8 @@ First install [omz](https://ohmyz.sh/)
 
 ## Theme
 
-I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k). The
-[,p10k](backup/.p10k.zsh) script is already on this backup, so just install the
+I'm using [powerlevel10k](https://github.com/romkatv/powerlevel10k). The, 
+[p10k](backup/.p10k.zsh) script is already on this backup, so just install the
 theme after running the restore script
 
 # Colorscheme
