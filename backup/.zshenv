@@ -42,6 +42,10 @@ function dev {
     cd "$HOME/Developer/$1"
 }
 
+function sew {
+    pandoc --pdf-engine=xelatex -F mermaid-filter --template eisvogel --output=book.pdf $@
+}
+
 ######################################
 # OS dependent config
 ######################################
