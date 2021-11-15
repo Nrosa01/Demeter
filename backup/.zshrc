@@ -28,6 +28,10 @@ DISABLE_MAGIC_FUNCTIONS=true
 # Disable compinit to improve performance
 skip_global_compinit=1
 
+# Disable do you wish to see all x posibilities
+zstyle ':completion:*' list-prompt   ''
+zstyle ':completion:*' select-prompt ''
+
 ######################################
 # Interactive config
 ######################################
@@ -142,10 +146,11 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
 	git 
 	colored-man-pages 
-	zsh-syntax-highlighting
 	macos
-	zsh-autocomplete
-	# zsh-autosuggestions
+	cargo
+	zsh-syntax-highlighting
+	zsh-completions
+	zsh-autocomplete # Kinda slow but really cool
 )
 
 source $ZSH/oh-my-zsh.sh
