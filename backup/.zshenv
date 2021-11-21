@@ -44,7 +44,10 @@ function dev {
 }
 
 function sew {
-    pandoc --pdf-engine=xelatex -F mermaid-filter --template eisvogel --output=book.pdf $@
+    # Disable floating images pandoc
+    # https://stackoverflow.com/a/58840456
+    # https://gist.github.com/Altair-Bueno/1d50eb67449a971ddf7fb9deb435b6f8
+    pandoc -H "$HOME/.pandoc/header/disable_float.tex" --pdf-engine=xelatex -F mermaid-filter --template eisvogel --output=out.pdf $@
 }
 
 ######################################

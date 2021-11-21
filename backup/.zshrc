@@ -56,6 +56,10 @@ export SHELL_COMPLETIONS_DIR="$HOME/.oh-my-zsh/completions"
 # fnm completitions
 eval "$(fnm env)"
 
+# zsh autocomplete
+zstyle ':autocomplete:*' insert-unambiguous yes # autocomplete just the common part
+zstyle ':autocomplete:*' fzf-completion yes     # use fzf autocomplete
+
 ######################################
 # iTerm2
 ######################################
@@ -148,7 +152,8 @@ plugins=(
 	colored-man-pages 
 	macos
 	cargo
-	zsh-syntax-highlighting
+	# zsh-syntax-highlighting
+	fast-syntax-highlighting
 	zsh-completions
 	zsh-autocomplete # Kinda slow but really cool
 )

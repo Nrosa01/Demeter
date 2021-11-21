@@ -48,6 +48,7 @@ First install [omz](https://ohmyz.sh/)
 - [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
   (should be installed with homebrew)
+- [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) 
 
 ## Theme
 
