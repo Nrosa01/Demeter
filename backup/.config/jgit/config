@@ -1,0 +1,6 @@
+[filesystem "Oracle Corporation|16.0.2|//DRIVE@localhost:56332/Google%20Drive"]
+	timestampResolution = 1000 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Oracle Corporation|16.0.2|/dev/disk1s1"]
+	timestampResolution = 2000 nanoseconds
+	minRacyThreshold = 0 nanoseconds
