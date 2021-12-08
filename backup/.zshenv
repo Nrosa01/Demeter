@@ -66,4 +66,5 @@ then
 elif [[ $(uname) == 'Linux' ]]
 then
     # Linux specific config
+    alias open='xdg-open'
 fi
