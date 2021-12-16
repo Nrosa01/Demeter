@@ -6,7 +6,7 @@
 . "$HOME/.cargo/env"
 
 # Java Home jdk 17
-export JAVA_HOME="/usr/local/Cellar/openjdk/17/libexec/openjdk.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
 
 #Bison
 path+='/usr/local/opt/bison/bin'
