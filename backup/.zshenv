@@ -26,6 +26,10 @@ path+="$HOME/Demeter/scripts"
 # nvm alternative. Faster, built using Rust
 path+="$HOME/.fnm"
 
+# Go
+export GOPATH="$HOME/.go"
+path+="$HOME/.go/bin"
+
 ######################################
 # Aliases
 ######################################
