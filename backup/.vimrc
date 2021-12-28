@@ -87,7 +87,12 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
+
 syntax on
 colorscheme onedark
 " Current color is too light for LineNr
 :highlight LineNr ctermfg=grey
+
+" Fuzzy search fzf
+set rtp+=/usr/local/opt/fzf
