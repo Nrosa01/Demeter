@@ -150,7 +150,7 @@ plugins=(
 	git 
 	colored-man-pages 
 	macos
-	cargo
+	rust
 	# zsh-syntax-highlighting
 	fast-syntax-highlighting
 	zsh-completions
