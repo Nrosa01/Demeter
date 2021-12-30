@@ -69,7 +69,7 @@ I'm currently using One Dark. You can find it for:
 
 - [Jetbrains Mono](https://www.jetbrains.com/es-es/lp/mono/) for text editors
 - [Jetbrains Mono Nerd Fonts](https://www.nerdfonts.com/font-downloads) for the
-  console
+  console (size 15)
 
 # macOS config
 

@@ -9,19 +9,7 @@
 [core]
 	excludesfile = /Users/compux72/.gitignore_global
 	autocrlf = input
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[commit]
-	template = /Users/compux72/.stCommitMsg
 [init]
 	defaultBranch = master
-[diff]
-	tool = vimdiff
-[merge]
-	tool = vimdiff
 [credential]
 	helper = osxkeychain

@@ -24,7 +24,7 @@ if [[ -d "$DEMETER" ]]
 then
 	# "$DEMETER" folder already exist on this machine, testing origin
 	echo "Found Demeter folder on $DEMETER, checking source"
-	cd "$DEMETER"
+	cd "$DEMETER" || exit 100
 	if [[ $(git config --get remote.origin.url) == "$REMOTE_URL" ]]
 	then
 		echo "Updating backup..."
@@ -37,14 +37,14 @@ else
 	echo "Found no backup on $DEMETER. Cloning from remote"
 
 	export PARENT_FOLDER=$(dirname "$DEMETER")
-	cd "$PARENT_FOLDER"
+	cd "$PARENT_FOLDER" || exit 100
 
 	git clone "$REMOTE_URL"
 fi
 
 
 # Create links
-cd "$DEMETER/backup"
+cd "$DEMETER/backup" || exit 100
 
 echo "Creating links"
 for TEMP in $(ls -A)
@@ -56,11 +56,28 @@ do
 done
 
 # Creating vim folders
-cd "$HOME"
-mkdir ".vim" 2> /dev/null
-mkdir ".vim/undodir" 2> /dev/null
+cd "$HOME" || exit 100
+mkdir -p "$HOME/.vim/undodir" 2> /dev/null
 
-# Setting up the .gitignore_global file
-git config --global core.excludesfile ~/.gitignore_global
+if [[ $(uname) == 'Darwin' ]]
+then
+    # macOS specific config
+	rm "$HOME/.gitconfig"
+	ln -nfs "$DEMETER/macOS/.gitconfig" "$HOME/.gitconfig"
+	# Setting up the .gitignore_global file
+	# git config --global core.excludesfile ~/.gitignore_global
+
+elif [[ $(uname) == 'Linux' ]]
+then
+    # Linux specific config
+	rm "$HOME/.gitconfig"
+	ln -nfs "$DEMETER/linux/.gitconfig" "$HOME/.gitconfig"
+	
+elif [[ $(uname) == 'FreeBSD' ]]
+then
+    # FreeBSD specific config
+	rm "$HOME/.gitconfig"
+	ln -nfs "$DEMETER/bsd/.gitconfig" "$HOME/.gitconfig"
+fi
 
 exit 0
