@@ -11,5 +11,6 @@
 	autocrlf = input
 [init]
 	defaultBranch = master
+
 [credential]
-	helper = osxkeychain
+	helper = libsecret
