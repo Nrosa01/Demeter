@@ -51,7 +51,7 @@ for TEMP in $(ls -A)
 do
 	echo "Linking $TEMP"
 	# Delete the file before making the symlink, just in case
-	rm "$HOME/$TEMP"
+	rm "$HOME/$TEMP" 2> /dev/null
 	ln -nfs "$DEMETER/backup/$TEMP" "$HOME/$TEMP"
 done
 
