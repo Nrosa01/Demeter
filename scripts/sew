@@ -1,0 +1,63 @@
+#!/bin/zsh
+
+###############################################################################
+# Sew 1.0                                                                     #
+# Altair Bueno MIT license                                                    #
+# https://github.com/Altair-Bueno/Demeter                                     #
+#                                                                             #
+# Create books (PDF files) from multiple pdf files easily                     #
+#                                                                             #
+# Book                                                                        #
+#    ├── metadata.yaml                                                        #
+#    ├── resources                                                            #
+#    │   └── A1.png                                                           #
+#    ├── Chapter-1                                                            #
+#    │   └── ej1.md                                                           #
+#    ...                                                                      #
+#                                                                             #
+# sew Chapter**/*.md                                                          #
+#                                                                             #
+###############################################################################
+
+
+# Output file name
+out_name='Book.pdf'
+# LaTeX engine used to generate the PDF
+pdf_engine='xelatex'
+# LaTex template
+template='eisvogel'
+# Pandoc filters to appy
+filters=(
+    'mermaid-filter'
+    'pandoc-include-code'
+)
+# List of arguments
+arguments=(
+    # Disable floating images pandoc
+    # https://stackoverflow.com/a/58840456
+    # https://gist.github.com/Altair-Bueno/1d50eb67449a971ddf7fb9deb435b6f8
+    "--include-in-header=$HOME/.pandoc/header/disable_float.tex"
+    "--output=$out_name"
+    "--pdf-engine=$pdf_engine"
+    "--template=$template"
+    # https://github.com/jgm/pandoc/issues/3752#issuecomment-1004352568
+    "--from=markdown+rebase_relative_paths"
+)
+
+# Add metadata block if file is present
+if [[ -f 'metadata.yml' ]]
+then 
+    arguments+='--metadata-file=metadata.yml'
+elif [[ -f 'metadata.yaml' ]]
+then
+    arguments+='--metadata-file=metadata.yaml'
+fi
+
+# Prepare filters
+for filter in $filters
+do 
+    arguments+="--filter=$filter"
+done
+
+# Execute pandoc
+pandoc $arguments $*
