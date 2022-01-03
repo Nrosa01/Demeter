@@ -28,13 +28,12 @@ DISABLE_MAGIC_FUNCTIONS=true
 # Disable compinit to improve performance
 skip_global_compinit=1
 
-# Disable do you wish to see all x posibilities
-zstyle ':completion:*' list-prompt   ''
-zstyle ':completion:*' select-prompt ''
-
 ######################################
 # Interactive config
 ######################################
+# Disable do you wish to see all x posibilities
+zstyle ':completion:*' list-prompt   ''
+zstyle ':completion:*' select-prompt ''
 
 # Disable some less nonsense
 export LESSHISTFILE=-
@@ -120,7 +119,7 @@ export UPDATE_ZSH_DAYS=30
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -151,7 +150,6 @@ plugins=(
 	colored-man-pages 
 	macos
 	rust
-	# zsh-syntax-highlighting
 	fast-syntax-highlighting
 	zsh-completions
 	zsh-autocomplete # Kinda slow but really cool
