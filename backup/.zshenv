@@ -39,11 +39,6 @@ alias python='python3.9'
 alias pip='python -m pip'
 alias ascii='asciinema'
 
-# Disable floating images pandoc
-# https://stackoverflow.com/a/58840456
-# https://gist.github.com/Altair-Bueno/1d50eb67449a971ddf7fb9deb435b6f8
-alias sew='pandoc -H "$HOME/.pandoc/header/disable_float.tex" --pdf-engine=xelatex -F mermaid-filter -F pandoc-include-code --template eisvogel'
-
 ######################################
 # Env variables
 ######################################
