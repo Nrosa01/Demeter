@@ -27,6 +27,14 @@ export LOG_FILE="$DEMETER/gitlog.txt"
 
 cd "$DEMETER"
 
+if [[ $(uname) == 'Darwin' ]]
+then
+	brew list | egrep "^[^(==>)]" | xargs > brew_packages.txt
+elif [[ $(uname) == 'Linux' ]]
+then
+	echo not supported
+fi
+
 echo "$COMMIT_MESSAGE
 ********************************************************************************
 " > "$LOG_FILE"
