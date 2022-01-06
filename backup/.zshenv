@@ -30,6 +30,12 @@ path+="$HOME/.fnm"
 export GOPATH="$HOME/.go"
 path+="$HOME/.go/bin"
 
+# Homebrew sbin
+path+='/usr/local/sbin'
+
+# Mono
+export MONO_GAC_PREFIX="/usr/local"
+
 ######################################
 # Aliases
 ######################################
@@ -38,6 +44,8 @@ alias iterm='open -a "iterm"'
 alias python='python3.9'
 alias pip='python -m pip'
 alias ascii='asciinema'
+alias vim='nvim'
+alias vi='nvim'
 
 ######################################
 # Env variables

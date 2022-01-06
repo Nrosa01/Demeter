@@ -54,7 +54,7 @@ export SHELL_COMPLETIONS_DIR="/usr/local/share/zsh/site-functions/"
 # fnm completitions
 eval "$(fnm env)"
 
-# zsh autocomplete
+# zsh autocomplete https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc
 zstyle ':autocomplete:*' insert-unambiguous yes # autocomplete just the common part
 zstyle ':autocomplete:*' fzf-completion yes     # use fzf autocomplete
 
@@ -152,6 +152,7 @@ plugins=(
 	rust
 	fast-syntax-highlighting
 	zsh-completions
+	fzf
 	zsh-autocomplete # Kinda slow but really cool
 )
 
