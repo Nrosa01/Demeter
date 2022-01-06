@@ -19,9 +19,12 @@
 #                                                                             #
 ###############################################################################
 
+if [[ $# -eq 0 ]]
+then 
+    echo "Usage: sew [pandoc-arguments] FILES..."
+    exit 1
+fi
 
-# Output file name
-out_name='Book.pdf'
 # LaTeX engine used to generate the PDF
 pdf_engine='xelatex'
 # LaTex template
@@ -31,6 +34,19 @@ filters=(
     'mermaid-filter'
     'pandoc-include-code'
 )
+
+# Extract output file name
+if [[ "$#" -gt 1 ]] 
+then
+    # Multiple files
+    out_name='Book.pdf'
+else 
+    # One file
+    s="$1"
+    s="${s##*/}"
+    out_name="${s%.*}.pdf"
+fi
+
 # List of arguments
 arguments=(
     # Disable floating images pandoc
@@ -59,5 +75,9 @@ do
     arguments+="--filter=$filter"
 done
 
-# Execute pandoc
-pandoc $arguments $*
+echo "Creating $out_name ..."
+# Execute pandoc and remove empty file
+pandoc $arguments $* || exit $?
+
+# Delete unnecesary file
+rm 'mermaid-filter.err' 2> /dev/null
