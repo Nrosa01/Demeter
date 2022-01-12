@@ -60,6 +60,14 @@ function dev {
     cd "$HOME/Developer/$1"
 }
 
+# From https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
+function man-preview {
+	man -w "$@" &> /dev/null && man -t "$@" | open -f -a Preview || man "$@"
+}
+function quick-look {
+	(( $# > 0 )) && qlmanage -p $* &> /dev/null &
+}
+
 ######################################
 # OS dependent config
 ######################################
@@ -69,7 +77,14 @@ then
 
     # WTF Microsoft. Starting a whole Python interpreter for opening vscode????
     # https://github.com/microsoft/vscode/issues/60579
-    alias code='open -b com.microsoft.VSCode'
+    function code {
+        for arg in $*
+        do 
+            mkdir -p "$(dirname "$arg")"
+            touch "$(basename "$arg")"
+        done
+        open -b com.microsoft.VSCode $*
+    }
 elif [[ $(uname) == 'Linux' ]]
 then
     # Linux specific config

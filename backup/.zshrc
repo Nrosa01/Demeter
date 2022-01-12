@@ -32,8 +32,10 @@ skip_global_compinit=1
 # Interactive config
 ######################################
 # Disable do you wish to see all x posibilities
-zstyle ':completion:*' list-prompt   ''
-zstyle ':completion:*' select-prompt ''
+# https://github.com/marlonrichert/zsh-autocomplete/issues/388
+# zstyle ':completion:*' list-prompt   ''
+# zstyle ':completion:*' select-prompt ''
+zstyle ':completion:*:*:man:*:*' menu select=long search
 
 # Disable some less nonsense
 export LESSHISTFILE=-
@@ -53,6 +55,9 @@ export BAT_THEME='TwoDark'
 export SHELL_COMPLETIONS_DIR="/usr/local/share/zsh/site-functions/"
 # fnm completitions
 eval "$(fnm env)"
+# zoxide completitions
+eval "$(zoxide init zsh)"
+export _ZO_ECHO=1
 
 # zsh autocomplete https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc
 zstyle ':autocomplete:*' insert-unambiguous yes # autocomplete just the common part
@@ -146,14 +151,14 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git 
-	colored-man-pages 
-	macos
 	rust
-	fast-syntax-highlighting
 	zsh-completions
 	fzf
-	zsh-autocomplete # Kinda slow but really cool
+	colored-man-pages 
+	fast-syntax-highlighting
+	zsh-autocomplete
+	# git 
+	# macos # Added usefull functions to .zshrc instead
 )
 
 source $ZSH/oh-my-zsh.sh
