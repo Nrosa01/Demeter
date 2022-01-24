@@ -60,14 +60,6 @@ function dev {
     cd "$HOME/Developer/$1"
 }
 
-# From https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
-function man-preview {
-	man -w "$@" &> /dev/null && man -t "$@" | open -f -a Preview || man "$@"
-}
-function quick-look {
-	(( $# > 0 )) && qlmanage -p $* &> /dev/null &
-}
-
 ######################################
 # OS dependent config
 ######################################
@@ -84,6 +76,28 @@ then
             touch "$(basename "$arg")"
         done
         open -b com.microsoft.VSCode $*
+    }
+
+    # Upgrade all Homebrew packages, zsh plugins and omz
+    function sysupgrade {
+        brew update
+        brew upgrade
+        omz update
+        for plugin in $ZSH_CUSTOM/*/*
+        do
+            if [[ -d "$plugin" ]]
+            then
+                git -C "$plugin" pull
+            fi
+        done 
+    }
+
+    # From https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
+    function man-preview {
+        man -w "$@" &> /dev/null && man -t "$@" | open -f -a Preview || man "$@"
+    }
+    function quick-look {
+        (( $# > 0 )) && qlmanage -p $* &> /dev/null &
     }
 elif [[ $(uname) == 'Linux' ]]
 then
