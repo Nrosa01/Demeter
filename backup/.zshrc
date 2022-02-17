@@ -52,7 +52,7 @@ export BAT_THEME='TwoDark'
 # export BAT_PAGER='less -RFX'
 
 # ZSH completitions
-export SHELL_COMPLETIONS_DIR="/usr/local/share/zsh/site-functions/"
+#export SHELL_COMPLETIONS_DIR="/usr/local/share/zsh/site-functions/"
 # fnm completitions
 eval "$(fnm env)"
 # zoxide completitions

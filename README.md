@@ -50,7 +50,7 @@ I'm currently using One Dark. You can find it for:
 - [Visual Studio Code](https://github.com/one-dark/vscode-one-dark-theme)
 - [iTerm2](https://github.com/one-dark/iterm-one-dark-theme)
 - [JetBrains' IDEs](https://github.com/one-dark/jetbrains-one-dark-theme)
-- [vim](https://github.com/joshdick/onedark.vim/)
+- [nvim](https://github.com/navarasu/onedark.nvim)
 
 # Font
 
