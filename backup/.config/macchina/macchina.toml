@@ -1,0 +1,21 @@
+theme = 'Custom'
+long_kernel = true
+long_shell = true
+show = [
+    'Host',
+    'Machine',
+    'Kernel',
+    'OperatingSystem',
+    'DesktopEnvironment',
+    'WindowManager',
+    'Resolution',
+#    'Backlight',
+    'Packages',
+#    'LocalIP',
+    'Terminal',
+    'Shell',
+    'Uptime',
+    'Processor',
+#    'ProcessorLoad',
+    'Memory',
+]

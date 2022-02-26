@@ -46,6 +46,7 @@ alias pip='python -m pip'
 alias ascii='asciinema'
 alias vim='nvim'
 alias vi='nvim'
+alias neofetch='macchina'
 
 ######################################
 # Env variables
