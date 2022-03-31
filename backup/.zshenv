@@ -36,12 +36,18 @@ path+='/usr/local/sbin'
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
 
+# Glassfish
+export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
+
+# Python 3.10
+path+='/usr/local/opt/python@3.10/bin'
+
 ######################################
 # Aliases
 ######################################
 alias nvm='fnm'
 alias iterm='open -a "iterm"'
-alias python='python3.9'
+alias python='python3.10'
 alias pip='python -m pip'
 alias ascii='asciinema'
 alias vim='nvim'
@@ -84,6 +90,7 @@ then
         brew update
         brew upgrade
         omz update
+        rustup update stable
         for plugin in $ZSH_CUSTOM/*/*
         do
             if [[ -d "$plugin" ]]

@@ -7,3 +7,6 @@
 [filesystem "JetBrains s.r.o.|11.0.13|/dev/disk1s1"]
 	timestampResolution = 12000 nanoseconds
 	minRacyThreshold = 0 nanoseconds
+[filesystem "Homebrew|17.0.2|/dev/disk1s1"]
+	timestampResolution = 3000 nanoseconds
+	minRacyThreshold = 0 nanoseconds

@@ -41,7 +41,7 @@ zstyle ':completion:*:*:man:*:*' menu select=long search
 export LESSHISTFILE=-
 
 # Use bat as pager instead
-export PAGER='bat'
+#export PAGER='bat'
 
 # Bat theme
 export BAT_THEME='TwoDark'
