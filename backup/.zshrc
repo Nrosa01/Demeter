@@ -53,8 +53,6 @@ export BAT_THEME='TwoDark'
 
 # ZSH completitions
 #export SHELL_COMPLETIONS_DIR="/usr/local/share/zsh/site-functions/"
-# fnm completitions
-eval "$(fnm env)"
 # zoxide completitions
 eval "$(zoxide init zsh)"
 export _ZO_ECHO=1
@@ -124,7 +122,7 @@ export UPDATE_ZSH_DAYS=30
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -132,7 +130,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
