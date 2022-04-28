@@ -33,8 +33,9 @@ export GLASSFISH_HOME=/usr/local/opt/glassfish/libexec
 # Python 3.10
 path+='/usr/local/opt/python@3.10/bin'
 
-# fnm (nvm) env
-eval "$(fnm env)"
+# Volta package manager
+export VOLTA_HOME="$HOME/.volta"
+path+="$VOLTA_HOME/bin"
 
 # https://daily-dev-tips.com/posts/how-to-verify-your-commits-on-github/
 export GPG_TTY=$(tty)
@@ -43,7 +44,6 @@ export GPG_TTY=$(tty)
 ######################################
 # Aliases
 ######################################
-alias nvm='fnm'
 alias iterm='open -a "iterm"'
 alias python='python3.10'
 alias pip='python -m pip'

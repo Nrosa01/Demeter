@@ -31,7 +31,7 @@ pdf_engine='xelatex'
 template='eisvogel'
 # Pandoc filters to appy
 filters=(
-    'mermaid-filter'
+    # 'mermaid-filter'
     'pandoc-include-code'
 )
 
