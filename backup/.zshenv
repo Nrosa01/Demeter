@@ -15,7 +15,7 @@ path+="$HOME/.jetbrains"
 # Rust cargo
 . "$HOME/.cargo/env"
 
-# OpenJDK 18 Java Home
+# OpenJDK Home
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
 
 # Bison
@@ -37,13 +37,10 @@ path+='/usr/local/opt/python@3.10/bin'
 export VOLTA_HOME="$HOME/.volta"
 path+="$VOLTA_HOME/bin"
 
-# https://daily-dev-tips.com/posts/how-to-verify-your-commits-on-github/
-export GPG_TTY=$(tty)
-
-
 ######################################
 # Aliases
 ######################################
+alias nvm='volta'
 alias iterm='open -a "iterm"'
 alias python='python3.10'
 alias pip='python -m pip'

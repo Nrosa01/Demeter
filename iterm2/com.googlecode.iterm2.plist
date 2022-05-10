@@ -366,6 +366,8 @@
 	<true/>
 	<key>DoubleClickPerformsSmartSelection</key>
 	<true/>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>EscapeShellCharsWithBackslash</key>
 	<false/>
 	<key>GlobalKeyMap</key>

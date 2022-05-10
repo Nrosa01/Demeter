@@ -154,9 +154,10 @@ plugins=(
 	fzf
 	colored-man-pages 
 	fast-syntax-highlighting
+	# fzf-tab
 	zsh-autocomplete
 	# git 
-	# macos # Added usefull functions to .zshrc instead
+	# macos # Added useful functions to .zshrc instead
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -186,3 +187,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias cd='z'
+alias ls='exa'

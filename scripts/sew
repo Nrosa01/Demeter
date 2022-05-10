@@ -80,4 +80,4 @@ echo "Creating $out_name ..."
 pandoc $arguments $* || exit $?
 
 # Delete unnecesary file
-rm 'mermaid-filter.err' 2> /dev/null
+rm 'mermaid-filter.err' 2> /dev/null || true
