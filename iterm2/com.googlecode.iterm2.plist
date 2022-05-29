@@ -1337,13 +1337,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.8666666666666667</real>
+				<real>0.12868392740444143</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.36078431372549019</real>
+				<real>0.32699871063232422</real>
 				<key>Red Component</key>
-				<real>0.45098039215686275</real>
+				<real>0.10805830214030721</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
