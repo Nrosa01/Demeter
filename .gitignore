@@ -1,2 +1,5 @@
 gitlog.txt
-**/rclone/**
+# Cloud storage credentials
+**/rclone
+# Database credentials
+**/gobang
