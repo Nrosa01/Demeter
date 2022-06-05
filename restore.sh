@@ -13,10 +13,6 @@
 # To see the full list of installed utilities, see [README.md](README.md)     #
 ###############################################################################
 
-# Install ZSH
-
-sudo apt-get install zsh
-
 # Remote VCS
 export REMOTE_URL="https://github.com/Nrosa01/Demeter"
 # Where is the backup folder. VSC folder name and system folder must match
@@ -85,10 +81,12 @@ git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ${Z
 
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting 
 
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+
 # Theme
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-chsh -s $(which zsh)
+chsh -s $(which zsh) < $(readline)
 
 exit 0
