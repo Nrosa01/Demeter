@@ -16,8 +16,15 @@ sudo apt-get install zsh
 ```bash
 curl "https://raw.githubusercontent.com/Nrosa01/Demeter/master/restore.sh" | bash
 ```
+3. Set ZSH as your default shell
 
-3. You're done! :D 
+```bash
+chsh -s $(which zsh)
+```
+
+4. You're done! :D 
+
+If plugins aren't working, do step 2 again.
 
 # Font
 
