@@ -13,11 +13,14 @@
 # To see the full list of installed utilities, see [README.md](README.md)     #
 ###############################################################################
 
+# Install ZSH
+
+sudo apt-get install zsh
+
 # Remote VCS
-export REMOTE_URL="https://github.com/Altair-Bueno/Demeter"
+export REMOTE_URL="https://github.com/Nrosa01/Demeter"
 # Where is the backup folder. VSC folder name and system folder must match
 export DEMETER="$HOME/Demeter"
-
 
 # Restoring backup
 if [[ -d "$DEMETER" ]]
@@ -59,15 +62,7 @@ done
 cd "$HOME" || exit 100
 mkdir -p "$HOME/.vim/undodir" 2> /dev/null
 
-if [[ $(uname) == 'Darwin' ]]
-then
-    # macOS specific config
-	rm "$HOME/.gitconfig"
-	ln -nfs "$DEMETER/macOS/.gitconfig" "$HOME/.gitconfig"
-	# Setting up the .gitignore_global file
-	# git config --global core.excludesfile ~/.gitignore_global
-
-elif [[ $(uname) == 'Linux' ]]
+if [[ $(uname) == 'Linux' ]]
 then
     # Linux specific config
 	rm "$HOME/.gitconfig"
@@ -79,5 +74,21 @@ then
 	rm "$HOME/.gitconfig"
 	ln -nfs "$DEMETER/bsd/.gitconfig" "$HOME/.gitconfig"
 fi
+
+# Install OMZ
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install PLugins
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
+
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting 
+
+# Theme
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+chsh -s $(which zsh)
 
 exit 0

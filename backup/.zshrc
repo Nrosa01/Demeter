@@ -1,6 +1,9 @@
 ######################################
 # Theme
 ######################################
+# source ~/Git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source ~/Git/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+# source ~/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -54,12 +57,12 @@ export BAT_THEME='TwoDark'
 # ZSH completitions
 #export SHELL_COMPLETIONS_DIR="/usr/local/share/zsh/site-functions/"
 # zoxide completitions
-eval "$(zoxide init zsh)"
-export _ZO_ECHO=1
+# eval "$(zoxide init zsh)"
+# export _ZO_ECHO=1
 
 # zsh autocomplete https://github.com/marlonrichert/zsh-autocomplete/blob/main/.zshrc
 zstyle ':autocomplete:*' insert-unambiguous yes # autocomplete just the common part
-zstyle ':autocomplete:*' fzf-completion yes     # use fzf autocomplete
+# zstyle ':autocomplete:*' fzf-completion yes     # use fzf autocomplete
 
 ######################################
 # iTerm2
@@ -151,7 +154,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
 	rust
 	zsh-completions
-	fzf
+	# fzf
 	colored-man-pages 
 	fast-syntax-highlighting
 	# fzf-tab
@@ -188,5 +191,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias cd='z'
-alias ls='exa'
+# alias cd='z'
+# alias ls='exa'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+function objneeded () {
+   objdump -p $@ | grep 'NEEDED'
+}
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

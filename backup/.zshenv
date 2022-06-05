@@ -13,7 +13,7 @@ path+="$HOME/Demeter/scripts"
 path+="$HOME/.jetbrains"
 
 # Rust cargo
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # OpenJDK Home
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
