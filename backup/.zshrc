@@ -198,6 +198,8 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias cppproj='curl "https://raw.githubusercontent.com/Nrosa01/CPP-Project-Template/main/setupCPP.bash" | bash'
+alias cproj='curl "https://raw.githubusercontent.com/Nrosa01/CPP-Project-Template/main/setupC.bash" | bash'
 
 function objneeded () {
    objdump -p $@ | grep 'NEEDED'
